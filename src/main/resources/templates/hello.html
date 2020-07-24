@@ -17,5 +17,12 @@
     </tr>
 </table>
 
+<form action="#" method="post" th:action="@{/next}">
+    <div th:each="user : ${userList}">
+        <input name="id" th:text="${user.id} + ':' +  ${user.name}" type="radio" th:value="${user.id}">
+    </div>
+    <button type="submit">確認</button>
+</form>
+
 </body>
 </html>
