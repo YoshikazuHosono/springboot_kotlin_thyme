@@ -6,5 +6,16 @@
 </head>
 <body>
 <h1 th:text="${message}"></h1>
+
+<table>
+    <tr th:each="val : ${list}">
+        <td th:text="${val}"></td>
+    </tr>
+    <tr th:each="user : ${userList}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+    </tr>
+</table>
+
 </body>
 </html>
